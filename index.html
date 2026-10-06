@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shishir sharma - Portfolio</title>
     <link rel="stylesheet" href="./style.css"/>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <nav>
@@ -11,12 +13,12 @@
         <div class="profile_name">
 Shishir sharma
           <div class="contact_info">
-            <img src="images/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+            <img src="images/envelope.png" alt="Email"/>
           shishirsharma199@jeemail.com
         </div>
         <div style="clear:both;"></div>
         <div class="contact_info">
-          <img src="images/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          <img src="images/phone.png" alt="Phone"/>
           +13456764598
 
         </div>
@@ -33,7 +35,7 @@ Shishir sharma
 
     <section id="about-me" class="container">
       <div>
-        <img src="images/man working.gif" class="profile_image"/>
+        <img src="images/man working.gif" class="profile_image" alt="Illustration of a person working at a computer"/>
       </div>
 
       <div>
@@ -54,13 +56,13 @@ Shishir sharma
 
       <div class="all_skills">
         <div class="skill">
-          <img src="images/html5.png"/>
+          <img src="images/html5.png" alt="HTML5 logo"/>
           <h6>HTML</h6>
           <p>2 years experience</p>
         </div>  
 
         <div class="skill">
-          <img src="images/js.jpeg"/>
+          <img src="images/js.jpeg" alt="JavaScript logo"/>
           <h6>JavaScript</h6>
           <p>3 years experience</p>
         </div>  
@@ -68,19 +70,19 @@ Shishir sharma
          
 
         <div class="skill">
-          <img src="images/react.png"/>
+          <img src="images/react.png" alt="React logo"/>
           <h6>React</h6>
           <p>3 years experience</p>
         </div>  
 
         <div class="skill">
-          <img src="images/node.png"/>
+          <img src="images/node.png" alt="Node.js logo"/>
           <h6>Node.js</h6>
           <p>3 years experience</p>
         </div> 
 
         <div class="skill">
-          <img src="images/CSS3.png"/>
+          <img src="images/CSS3.png" alt="CSS3 logo"/>
           <h6>css</h6>
           <p>3 years experience</p>
         </div>  
@@ -175,8 +177,8 @@ Shishir sharma
       <div class="flex_center">
         <fieldset>
           <legend class="introduction">Leave a Recommendation</legend>          
-          <input type="text" placeholder="Name (Optional)"> <br/>
-          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <input type="text" id="recommender_name" placeholder="Name (Optional)" aria-label="Name (optional)"> <br/>
+          <textarea id="new_recommendation" aria-label="Recommendation message" cols="500" rows="10" placeholder="Message"></textarea>
           <div class="flex_center">
             <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
           </div>
@@ -191,8 +193,8 @@ Shishir sharma
         </svg>      </a>
     </div>
 
-    <div class="popup" id="popup" class="flex_center">
-      <img src="images/checkmark--outline.svg"/>
+    <div class="popup" id="popup">
+      <img src="images/checkmark--outline.svg" alt="Success"/>
       <h3>Thanks for leaving a recommendation</h3>
       <button onclick="showPopup(false)">Ok</button>
     </div>
