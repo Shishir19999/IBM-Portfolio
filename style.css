@@ -312,3 +312,21 @@ button:hover {
   text-align: center;
   cursor: pointer;
 }
+
+/* Responsive layout */
+@media (max-width: 992px) {
+  #home { height: auto; padding: 20px 10px; margin: -8px -8px 0; }
+  .profile_name { float: none; padding-left: 10px; }
+  .topdiv { float: none; padding: 10px 0 0 10px; }
+  .topmenu { display: inline-block; margin: 4px; padding: 8px; font-size: 16px; }
+  .container { flex-direction: column; align-items: center; }
+  .profile_image { width: 90%; max-width: 550px; }
+  #about-me h1 { font-size: 40px; margin-top: 20px; }
+  #about-me p { font-size: 18px; margin-top: 0; }
+  h2 { float: none; font-size: 36px; margin: 30px 10px 0; }
+  .skill { margin: 15px; }
+}
+@media (max-width: 600px) {
+  .all_skills { justify-content: center; }
+  textarea { width: 95%; }
+}

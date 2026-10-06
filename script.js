@@ -1,11 +1,17 @@
 function addRecommendation() {
   let recommendation = document.getElementById("new_recommendation");
   if (recommendation.value != null && recommendation.value.trim() != "") {
-    console.log("New recommendation added");
     showPopup(true);
     var element = document.createElement("div");
     element.setAttribute("class","recommendation");
-    element.innerHTML = "\<span\>&#8220;\</span\>" + recommendation.value + "\<span\>&#8221;\</span\>";
+    // Build with textContent so user text is never interpreted as HTML.
+    var open = document.createElement("span");
+    open.textContent = "“";
+    var close = document.createElement("span");
+    close.textContent = "”";
+    element.appendChild(open);
+    element.appendChild(document.createTextNode(recommendation.value));
+    element.appendChild(close);
     document.getElementById("all_recommendations").appendChild(element); 
     
     recommendation.value = "";
